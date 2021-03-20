@@ -2,18 +2,19 @@
   <v-app>
     <MainNav />
     <v-main>
-      <HeroBanner />
+      <Home />
     </v-main>
   </v-app>
 </template>
 
 <script>
 import MainNav from "./components/nav/MainNav";
-import HeroBanner from "./components/banner/HeroBanner";
+// import HeroBanner from "./components/banner/HeroBanner";
+import Home from "./pages/Home";
 
 export default {
   name: "App",
-  components: { MainNav, HeroBanner },
+  components: { MainNav, Home },
   data: () => ({
     // drawer: false,
     // group: null,
