@@ -7,7 +7,7 @@ const allVowelSounds = [
     { ipaPhoneme: 'ɛ', graphemeSequences: ['e'] },
     // { ipaPhoneme: 'eɪ', graphemeSequences: ['a'] },
     { ipaPhoneme: 'ə', graphemeSequences: ['e'] },
-    { ipaPhoneme: 'oʊ', graphemeSequences: ['o'] },
+    // { ipaPhoneme: 'oʊ', graphemeSequences: ['o'] },
     { ipaPhoneme: 'æ', graphemeSequences: ['a'] },
     { ipaPhoneme: 'ʌ', graphemeSequences: ['u'] },
     { ipaPhoneme: 'ɑ', graphemeSequences: ['o'] },

@@ -1,16 +1,15 @@
 <template>
   <v-parallax dark src="@/assets/hero-banner.png">
     <v-row align="center" justify="center">
-      <v-col
-        class="text-center"
-        cols="12"
-        :style="{ background: 'rgba(1,1,1,0.3)', maxWidth: '500px' }"
-      >
-        <h1 class="display-1 font-weight-thin mb-4">
-          {{ ranglish.writing }}
+      <v-col cols="12" class="text-center" id="ranglish_text-container">
+        <h1 class="display-1 font-weight-thin mb-4" v-text="ranglish.writting">
+          Ranglish
         </h1>
-        <h1 class="display-1 font-weight-thin mb-4">
-          {{ ranglish.pronunciation }}
+        <h1
+          class="display-1 font-weight-thin mb-4"
+          v-text="ranglish.pronunciation"
+        >
+          /ɹæŋ ɡlɪʃ/
         </h1>
         <v-btn @click="generate">Generate</v-btn>
       </v-col>
@@ -27,10 +26,9 @@ export default {
     // HeroBanner,
   },
   data: () => ({
-    drawer: false,
     ranglish: {
-      writing: "Ranglish",
-      pronunciation: "Ranglish",
+      writting: "Ranglish",
+      pronunciation: "/ɹæŋ ɡlɪʃ/",
     },
     // group: null,
   }),
@@ -41,9 +39,16 @@ export default {
   },
   methods: {
     generate() {
-      const { writing, pronunciation } = ranglishGenerator.getNext();
-      this.ranglish = { writing, pronunciation };
+      const { writting, pronunciation } = ranglishGenerator.getNext();
+      this.ranglish = { writting, pronunciation };
     },
   },
 };
 </script>
+
+<style  scoped>
+#ranglish_text-container {
+  background: rgba(1, 1, 1, 0.3);
+  max-width: 500px;
+}
+</style>

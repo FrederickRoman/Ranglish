@@ -26,8 +26,8 @@ const wordGenerator = {
     const syllable = [onset, nucleus, coda];
 
     const pronunciation = `/${syllable.map(s => s.ipaPhoneme).join('')}/`;
-    const writing = `${syllable.map(s => s.graphemeSequences).join('')}`;
-    return { pronunciation, writing };
+    const writting = `${syllable.map(s => s.graphemeSequences).join('')}`;
+    return { pronunciation, writting };
   },
 };
 
