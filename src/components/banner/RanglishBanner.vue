@@ -1,5 +1,5 @@
 <template>
-  <v-parallax dark src="@/assets/hero-banner.png">
+  <v-parallax height="500" dark src="@/assets/hero-banner.png">
     <v-row align="center" justify="center">
       <v-col cols="12" class="text-center" id="ranglish_text-container">
         <h1 class="display-1 font-weight-thin mb-4" v-text="ranglish.writting">
@@ -11,7 +11,7 @@
         >
           /ɹæŋ ɡlɪʃ/
         </h1>
-        <v-btn @click="generate">Generate</v-btn>
+        <v-btn dark color="secondary" @click="generate">Generate</v-btn>
       </v-col>
     </v-row>
   </v-parallax>

@@ -18,7 +18,7 @@
         </p>
       </div>
     </div>
-    <v-divider class="mb-6"></v-divider>
+    <v-divider class="mb-6" color="primary"></v-divider>
     <div class="">
       <div class="d-flex mx-4 mb-6">
         <h1 class="d-flex justify-center align-center mx-6">Custom Lists</h1>
