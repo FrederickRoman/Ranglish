@@ -6,6 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+  <link rel="stylesheet" href="<%= BASE_URL %>background.min.css">
+  <link rel="stylesheet" href="<%= BASE_URL %>loader.min.css">
   <title>
     <%= htmlWebpackPlugin.options.title %>
   </title>
@@ -25,8 +27,7 @@
   <meta name="application-name" content="Ranglish">
   <meta name="msapplication-TileColor" content="#00a300">
   <meta name="theme-color" content="#ffdab9">
-  
-  
+
 </head>
 
 <body>
@@ -34,7 +35,16 @@
     <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled.
         Please enable it to continue.</strong>
   </noscript>
-  <div id="app"></div>
+  <div id="app">
+    <div class="loader-container">
+      <svg height="260" width="260" class="loader" version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <polygon points="130,0 251.29,65 251.29,195 130,260 5.629,195 5.629,65" style="fill:#556b2f" />
+        <text x="87.5" y="188.75" fill="white" style="font-size: 1500%;">ɹ</text>
+        Sorry, your browser does not support inline SVG.
+      </svg>
+    </div>
+
+  </div>
   <!-- built files will be auto injected -->
 </body>
 
