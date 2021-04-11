@@ -1,5 +1,9 @@
 <template>
-  <v-parallax height="500" dark src="@/assets/hero-banner.png">
+  <v-parallax
+    dark
+    src="@/assets/img/hero-banner.png"
+    id="v-parallax_fallback-bg"
+  >
     <v-row align="center" justify="center">
       <v-col cols="12" class="text-center" id="ranglish_text-container">
         <h1 class="display-1 font-weight-thin mb-4" v-text="ranglish.writting">
@@ -50,5 +54,10 @@ export default {
 #ranglish_text-container {
   background: rgba(1, 1, 1, 0.3);
   max-width: 500px;
+}
+
+#v-parallax_fallback-bg {
+  background: #ffdab9
+    linear-gradient(to bottom, #a0522d 0%, #ffdab9 50%, #fff 90%, #fff 100%);
 }
 </style>

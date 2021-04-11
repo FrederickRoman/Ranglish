@@ -2,6 +2,12 @@
   <span>
     <!-- Must have the app property -->
     <v-app-bar app color="primary">
+      <v-img
+        lazy-src="@/assets/img/logoLazyLoader.svg"
+        max-height="40"
+        max-width="40"
+        src="@/assets/img/logo.svg"
+      ></v-img>
       <v-toolbar-title>Ranglish</v-toolbar-title>
       <v-spacer></v-spacer>
       <v-btn
