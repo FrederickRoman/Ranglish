@@ -1,0 +1,13 @@
+@use '@/styles/colors/_colors.scss';
+
+$ranglish_fontStack: "Pacifico", Arial, "Helvetica Neue", Helvetica, sans-serif;
+
+@mixin ranglish_fontStack {
+    font-family: $ranglish_fontStack;
+}
+
+@mixin logo_text{
+  @include ranglish_fontStack;
+  text-shadow: 0 0 3px colors.$primary-color;
+  line-height: 2.0;
+}

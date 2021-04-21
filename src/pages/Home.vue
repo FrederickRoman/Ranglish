@@ -1,17 +1,17 @@
 <template>
   <div>
-    <RanglishBanner />
+    <BannerSection />
     <RanglishDescriptionSection />
   </div>
 </template>
 
 <script>
-import RanglishBanner from "../components/banner/RanglishBanner";
+import BannerSection from "../components/banner/BannerSection";
 import RanglishDescriptionSection from "../components/content/RanglishDescriptionSection";
 
 export default {
   components: {
-    RanglishBanner,
+    BannerSection,
     RanglishDescriptionSection,
   },
 };

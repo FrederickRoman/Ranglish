@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+  <v-app id="app-bg">
     <MainNav />
     <v-main>
       <Home />
@@ -26,3 +26,11 @@ export default {
   },
 };
 </script>
+
+<style lang="scss" scoped>
+@use '@/styles/colors/_colors.scss';
+
+#app-bg {
+  background: colors.$background-color;
+}
+</style>

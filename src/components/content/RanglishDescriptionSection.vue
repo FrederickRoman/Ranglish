@@ -2,7 +2,9 @@
   <div class="d-lg-flex">
     <div class="mx-4">
       <div class="d-flex mx-4 mb-6">
-        <h1 class="d-flex justify-center align-center mx-4">Ranglish</h1>
+        <h1 class="d-flex justify-center align-center mx-4 ranglish_brand-font">
+          Ranglish
+        </h1>
         <h4 class="d-flex justify-center align-center subheading mx-4">
           Random English-sounding word generator.
         </h4>
@@ -33,3 +35,11 @@
     </div>
   </div>
 </template>
+
+ <style lang="scss" scoped>
+@use '@/styles/fonts/_fonts.scss';
+
+.ranglish_brand-font {
+  @include fonts.logo_text;
+}
+</style> 

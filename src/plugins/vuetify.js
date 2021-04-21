@@ -9,7 +9,7 @@ const vuetify = new Vuetify({
     themes: {
       light
     },
-  },
+  }
 })
 
 export default vuetify
