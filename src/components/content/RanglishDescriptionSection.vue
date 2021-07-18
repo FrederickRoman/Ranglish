@@ -41,5 +41,6 @@
 
 .ranglish_brand-font {
   @include fonts.logo_text;
+  text-decoration: underline;
 }
 </style> 

@@ -1,5 +1,5 @@
 <template>
-  <v-navigation-drawer app v-model="drawer" bottom>
+  <v-navigation-drawer app v-model="drawer" color="primary" bottom temporary>
     <DrawerBrandLi />
     <v-divider />
     <DrawerNavList v-bind="$attrs" v-on="$listeners" />
