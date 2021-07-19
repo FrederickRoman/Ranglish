@@ -1,7 +1,12 @@
 import { Request, Response } from "express";
-const WordService = require("../services/word/WordService");
+import IWord from "../../types/interfaces/IWord";
+import WordService from "../services/word/WordService";
 
-exports.word_detail = async (_: Request, res: Response) => {
-  const word = WordService.getNext();
-  res.status(200).json(word);
-};
+class wordController {
+  static word_detail(_: Request, res: Response): void {
+    const word: IWord = WordService.getNext();
+    res.status(200).json(word);
+  }
+}
+
+export default wordController;

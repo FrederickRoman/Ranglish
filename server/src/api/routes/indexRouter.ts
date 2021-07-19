@@ -1,8 +1,7 @@
-var express = require("express");
-var router = express.Router();
+import express from "express";
+import wordRouter from "./wordRouter";
 
-const wordRouter = require("./wordRouter");
-
+const router = express.Router();
 router.use("/word", wordRouter);
 
 

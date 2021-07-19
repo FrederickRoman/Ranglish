@@ -2,32 +2,38 @@ import onsetList from "./onset";
 import nucleusList from "./nucleus";
 import codaList from "./coda";
 
-const WordService = {
-  numOfOnsets: onsetList.length,
-  numOfNucleus: nucleusList.length,
-  numOfCoda: codaList.length,
-  randIntMax(maxNum: number) {
-    return Math.floor(Math.random() * maxNum);
-  },
-  randOnset() {
-    return onsetList[this.randIntMax(this.numOfOnsets)];
-  },
-  randNucleus() {
-    return nucleusList[this.randIntMax(this.numOfNucleus)];
-  },
-  randCoda() {
-    return codaList[this.randIntMax(this.numOfCoda)];
-  },
-  getNext() {
-    const onset = this.randOnset();
-    const nucleus = this.randNucleus();
-    const coda = this.randCoda();
-    const syllable = [onset, nucleus, coda];
+import ISyllableSegment from "../../../types/interfaces/ISyllableSegment";
+import IWord from "../../../types/interfaces/IWord";
 
-    const pronunciation = `/${syllable.map((s) => s.ipaPhoneme).join("")}/`;
-    const writting = `${syllable.map((s) => s.graphemeSequences).join("")}`;
+const numOfOnsets: number = onsetList.length;
+const numOfNucleus: number = nucleusList.length;
+const numOfCoda: number = codaList.length;
+
+const randIntMax = (maxNum: number): number =>
+  Math.floor(Math.random() * maxNum);
+
+const randOnset = (): ISyllableSegment => onsetList[randIntMax(numOfOnsets)];
+const randNucleus = (): ISyllableSegment =>
+  nucleusList[randIntMax(numOfNucleus)];
+const randCoda = (): ISyllableSegment => codaList[randIntMax(numOfCoda)];
+
+class WordService {
+  static getNext(): IWord {
+    const onset: ISyllableSegment = randOnset();
+    const nucleus: ISyllableSegment = randNucleus();
+    const coda: ISyllableSegment = randCoda();
+    const syllableSegments: ISyllableSegment[] = [onset, nucleus, coda];
+
+    let phonemeSeq: string = "";
+    let graphemeSeq: string = "";
+    for (const { ipaPhoneme, graphemeSequences } of syllableSegments) {
+      phonemeSeq += ipaPhoneme;
+      graphemeSeq += graphemeSequences.join("");
+    }
+    const pronunciation: string = `/${phonemeSeq}/`;
+    const writting: string = `${graphemeSeq}`;
     return { pronunciation, writting };
-  },
-};
+  }
+}
 
-module.exports = WordService;
+export default WordService;

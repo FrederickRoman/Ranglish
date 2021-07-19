@@ -1,6 +1,7 @@
-var express = require('express');
-var router = express.Router();
-const word_controller = require('../controllers/wordController');
+import express from 'express';
+import word_controller from '../controllers/wordController';
+
+const router = express.Router();
 
 // const urlencodedParser = express.urlencoded({ extended: false });
 
@@ -8,7 +9,7 @@ router.route('/')
     // .all(urlencodedParser)
     .get(word_controller.word_detail);
 
-module.exports = router;
+export default router;
 
 
 

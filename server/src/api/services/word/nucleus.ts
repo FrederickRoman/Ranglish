@@ -1,5 +1,7 @@
+import ISyllableSegment from "../../../types/interfaces/ISyllableSegment";
+
 // General American
-const allVowelSounds = [
+const allVowelSounds: ISyllableSegment[]  = [
     { ipaPhoneme: 'ɪ', graphemeSequences: ['i'] },
     { ipaPhoneme: 'i', graphemeSequences: ['ee'] },
     { ipaPhoneme: 'ʊ', graphemeSequences: ['u'] },
