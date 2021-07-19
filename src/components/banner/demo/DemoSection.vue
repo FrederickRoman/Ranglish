@@ -1,11 +1,14 @@
 <template>
   <v-row align="center" justify="center">
     <v-col cols="12" class="text-center" id="ranglish_text-container">
-      <h1 class="display-1 font-weight-thin mb-4">
-        {{ ranglish.writting }}
+      <h1 class="display-1 font-weight-thin mb-4" v-text="ranglish.writting">
+        Ranglish
       </h1>
-      <h1 class="display-1 font-weight-thin mb-4">
-        {{ ranglish.pronunciation }}
+      <h1
+        class="display-1 font-weight-thin mb-4"
+        v-text="ranglish.pronunciation"
+      >
+        /ɹæŋ ɡlɪʃ/
       </h1>
       <v-btn dark color="secondary" @click="generate">Generate</v-btn>
     </v-col>
@@ -13,19 +16,31 @@
 </template>
 
 <script>
-import ranglishGenerator from "@/services/wordGeneration/wordGenerator.js";
+import { mapGetters, mapActions } from "vuex";
 
 export default {
   data: () => ({
     ranglish: {
-      writting: "Ranglish",
-      pronunciation: "/ɹæŋ ɡlɪʃ/",
+      writting: "",
+      pronunciation: "",
     },
   }),
+  computed: {
+    ...mapGetters(["initWord", "word"]),
+  },
+  created() {
+    this.ranglish = this.initWord;
+  },
   methods: {
-    generate() {
-      const { writting, pronunciation } = ranglishGenerator.getNext();
-      this.ranglish = { writting, pronunciation };
+    ...mapActions({ fetchWord: "FETCH_WORD" }),
+    async generate() {
+      try {
+        await this.fetchWord();
+        this.ranglish = this.word;
+      } catch (error) {
+        console.log(error);
+        this.ranglish = this.initWord;
+      }
     },
   },
 };

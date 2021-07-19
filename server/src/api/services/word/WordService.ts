@@ -2,12 +2,11 @@ import onsetList from "./onset";
 import nucleusList from "./nucleus";
 import codaList from "./coda";
 
-
-const wordGenerator = {
+const WordService = {
   numOfOnsets: onsetList.length,
   numOfNucleus: nucleusList.length,
   numOfCoda: codaList.length,
-  randIntMax(maxNum) {
+  randIntMax(maxNum: number) {
     return Math.floor(Math.random() * maxNum);
   },
   randOnset() {
@@ -25,10 +24,10 @@ const wordGenerator = {
     const coda = this.randCoda();
     const syllable = [onset, nucleus, coda];
 
-    const pronunciation = `/${syllable.map(s => s.ipaPhoneme).join('')}/`;
-    const writting = `${syllable.map(s => s.graphemeSequences).join('')}`;
+    const pronunciation = `/${syllable.map((s) => s.ipaPhoneme).join("")}/`;
+    const writting = `${syllable.map((s) => s.graphemeSequences).join("")}`;
     return { pronunciation, writting };
   },
 };
 
-export default wordGenerator;
+module.exports = WordService;
