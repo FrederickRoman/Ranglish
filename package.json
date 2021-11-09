@@ -7,7 +7,6 @@
     "client_build": "vue-cli-service build",
     "client_lint": "vue-cli-service lint",
     "server_build": "rimraf server_dist && tsc",
-    "preserve": "npm run server_build",
     "server_serve": "cross-env NODE_ENV=development concurrently \"tsc --watch\" \"nodemon -q server_dist/src/server.js\"",
     "postinstall": "npm run client_build && npm run server_build",
     "start": "cross-env NODE_ENV=production node server_dist/src/server.js",
