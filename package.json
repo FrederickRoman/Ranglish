@@ -8,6 +8,7 @@
     "start": "cd server && cross-env NODE_ENV=production node server_dist/src/server.js && cd ..",
     "client_dev": "cd client && npm run serve && cd ..",
     "server_dev": "cd server && npm run serve && cd ..",
+    "client_lint": "cd client && npm run client_lint && cd ..",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
