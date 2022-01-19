@@ -6,6 +6,8 @@
     "install": "cd client && npm install && cd ../server && npm install && cd ..",
     "postinstall": "cd client && npm run build && cd .. && cd server && npm run build && cd ..",
     "start": "cd server && cross-env NODE_ENV=production node server_dist/src/server.js && cd ..",
+    "client_dev": "cd client && npm run serve && cd ..",
+    "server_dev": "cd server && npm run serve && cd ..",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
