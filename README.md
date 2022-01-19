@@ -8,7 +8,7 @@ This a full-stack public API that provides made-up english-sounding words that f
 - drim: drɪm
 - sclown: sklaʊn
 
-![Ranglish home page](https://github.com/FrederickRoman/Ranglish/blob/main/docs/mockups/Ranglish%20(iPhone%205%20SE).png?raw=true)
+<img src="https://github.com/FrederickRoman/Ranglish/blob/main/docs/mockups/Ranglish%20(iPhone%205%20SE).png" alt="Ranglish home page phone mockup" height="320"/>
 
 ## Live website
 
