@@ -8,7 +8,12 @@ This a full-stack public API that provides made-up english-sounding words that f
 - drim: drɪm
 - sclown: sklaʊn
 
+<div>
+	<div style="display:flex; justify-content:space-evenly; align-items:center;">
 <img src="https://github.com/FrederickRoman/Ranglish/blob/main/docs/mockups/Ranglish%20(iPhone%205%20SE).png" alt="Ranglish home page phone mockup" height="320"/>
+<img src="https://github.com/FrederickRoman/Ranglish/blob/main/client/src/assets/img/logo.svg" alt="Ranglish logo" height="320"/>
+	</div>
+</div>
 
 ## Live website
 
@@ -23,12 +28,13 @@ GET https://ranglish.heroku.app/api/word
 No authorization token required (at least for now).
 
 ## Tech stack used in this project (all is in this repo)
+
 - Client-side:
-    + Vue.js (2)
-    + Vuetify 
+  - Vue.js (2)
+  - Vuetify
 - Server-side:
-    + Node (TS)
-    + Express
+  - Node (TS)
+  - Express
 
 ## Project setup
 
