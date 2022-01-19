@@ -4,5 +4,4 @@ import wordRouter from "./wordRouter";
 const router = express.Router();
 router.use("/word", wordRouter);
 
-
-module.exports = router;
+export default router;
