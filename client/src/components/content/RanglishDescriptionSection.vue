@@ -49,7 +49,10 @@
             Every syllable is made of segments that roughly correspond the
             beginning, the middle and the end of syllable.
           </p>
-          <p>Ranglish simply choose one those possible segments at random.</p>
+          <p>
+            Ranglish simply choose one those possible segments at random.
+            <router-link to="/about"> See more</router-link>
+          </p>
         </div>
       </div>
     </div>
