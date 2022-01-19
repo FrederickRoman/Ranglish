@@ -6,7 +6,7 @@ const app: Express = express();
 const morgan = require("morgan");
 const helmet = require("helmet");
 const apiRouter = require('./api/routes/indexRouter');
-const buildDirectory: string = path.join(__dirname, "../../dist");
+const buildDirectory: string = path.join(__dirname, "../../../client/dist");
 const serveStatic = express.static(buildDirectory);
 
 app
