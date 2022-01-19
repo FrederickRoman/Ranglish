@@ -2,10 +2,10 @@ import express, { Express } from "express";
 import path from "path";
 import compression from "compression";
 import cors from "cors";
+import morgan from "morgan";
+import helmet from "helmet";
+import apiRouter from './api/routes/indexRouter';
 const app: Express = express();
-const morgan = require("morgan");
-const helmet = require("helmet");
-const apiRouter = require('./api/routes/indexRouter');
 const buildDirectory: string = path.join(__dirname, "../../../client/dist");
 const serveStatic = express.static(buildDirectory);
 
