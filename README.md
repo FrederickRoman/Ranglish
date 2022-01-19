@@ -1,24 +1,59 @@
 # ranglish
 
+## Random English-sounding word generator
+
+This a full-stack public API that provides made-up english-sounding words that follow [english phonotactics](https://en.wikipedia.org/wiki/Phonotactics#English_phonotactics). For example:
+
+- gurt: ɡʌrt
+- drim: drɪm
+- sclown: sklaʊn
+
+## Live website
+
+See [Ranglish website](https://ranglish.heroku.app).
+
+## Access to public API
+
+Simply call the endpoint:
+
+GET https://ranglish.heroku.app/api/word
+
+No authorization token required (at least for now).
+
+## Tech stack used in this project (all is in this repo)
+- Client-side:
+    + Vue.js (2)
+    + Vuetify 
+- Server-side:
+    + Node (TS)
+    + Express
+
 ## Project setup
+
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### Compiles and hot-reloads for client development
+
 ```
-npm run serve
+npm run client_dev
+```
+
+### Compiles and hot-reloads for server development
+
+```
+npm run server_dev
 ```
 
 ### Compiles and minifies for production
+
 ```
-npm run build
+npm run postinstall
 ```
 
-### Lints and fixes files
-```
-npm run lint
-```
+### Lints and fixes client-side files
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+```
+npm run client_lint
+```
