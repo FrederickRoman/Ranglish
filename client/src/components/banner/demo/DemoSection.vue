@@ -18,6 +18,10 @@
 <script>
 import { mapGetters, mapActions } from "vuex";
 
+/** 
+ * @desc DemoSection fetches a new ranglish word form the API,
+ * every time the Generate button is pressed.
+*/
 export default {
   data: () => ({
     ranglish: {
