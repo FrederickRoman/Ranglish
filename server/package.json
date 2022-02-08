@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "build": "rimraf server_dist && tsc && cd ..",
+    "build": "rimraf server_dist && tsc",
     "serve": "cross-env NODE_ENV=development concurrently \"tsc --watch\" \"nodemon -q server_dist/src/server.js\"  && cd .."
   },
   "dependencies": {
