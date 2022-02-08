@@ -6,14 +6,16 @@
         <router-view />
       </v-scroll-x-transition>
     </v-main>
+    <Footer />
   </v-app>
 </template>
 
 <script>
 import MainNav from "./components/nav/MainNav";
+import Footer from "./components/footer/Footer";
 export default {
   name: "App",
-  components: { MainNav },
+  components: { MainNav, Footer },
 };
 </script>
 
