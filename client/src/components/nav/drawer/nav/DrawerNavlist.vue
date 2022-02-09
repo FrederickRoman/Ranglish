@@ -13,7 +13,7 @@
 
 <script>
 const NAV_ITEMS = Object.freeze([
-  { title: "API", icon: "mdi-dns", link: "/comingSoon" },
+  { title: "API", icon: "mdi-dns", link: "/apiPage" },
   { title: "About", icon: "mdi-help-box", link: "/about" },
   { title: "Contact", icon: "mdi-card-account-mail", link: "/comingSoon" },
 ]);

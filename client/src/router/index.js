@@ -4,9 +4,11 @@ import Home from "../views/Home.vue";
 
 const About = () =>
   import(/* webpackChunkName: "about" */ "../views/About.vue");
+const API = () =>
+  import(/* webpackChunkName: "apiPage" */ "../views/API.vue");
 const ComingSoon = () =>
   import(/* webpackChunkName: "comingSoon" */ "../views/ComingSoon.vue");
-  const NotFound = () =>
+const NotFound = () =>
   import(/* webpackChunkName: "404" */ "../views/NotFound.vue");
 
 Vue.use(VueRouter);
@@ -21,6 +23,11 @@ const routes = [
     path: "/about",
     name: "About",
     component: About,
+  },
+  {
+    path: "/apiPage",
+    name: "API",
+    component: API,
   },
   {
     path: "/comingSoon",
