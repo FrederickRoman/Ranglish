@@ -12,19 +12,13 @@
           <p>
             Ranglish is English-sounding word generator distributed through its
             public API. Ranglish is an
-            <a
-              href="https://github.com/FrederickRoman/Ranglish"
-              target="_blank"
-              rel="noopener"
-              >open source project
-            </a>
+            <ExternalLink href="https://github.com/FrederickRoman/Ranglish">
+              open source project
+            </ExternalLink>
             that was created by
-            <a
-              href="https://www.frederickroman.com"
-              target="_blank"
-              rel="noopener"
-              >Frederick Roman.
-            </a>
+            <ExternalLink href="https://www.frederickroman.com">
+              Frederick Roman.
+            </ExternalLink>
           </p>
           <p>
             Admittedly, it might not have many real-words use cases; but it was
@@ -75,6 +69,15 @@
     </div>
   </section>
 </template>
+
+<script>
+import ExternalLink from "@/components/link/ExternalLink";
+
+export default {
+  name: "About",
+  components: { ExternalLink },
+};
+</script>
 
  <style lang="scss" scoped>
 @use "@/styles/fonts/_fonts.scss";
