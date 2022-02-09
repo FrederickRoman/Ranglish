@@ -1,22 +1,20 @@
 <template>
   <v-card>
-    <pre class="language-js"><code>{{API_CALL_JS_CODE}}</code></pre>
+    <pre class="language-js"><code>{{code}}</code></pre>
   </v-card>
 </template>
 
 <script>
 import Prism from "prismjs";
 
-const API_CALL_JS_CODE =
-  `fetch('https://ranglish.herokuapp.com/api/word')` +
-  "\n" +
-  ".then(response => response.json())" +
-  "\n" +
-  ".then(json => console.log(json))";
-
 export default {
   name: "SyntaxHighlighter",
-  data: () => ({ API_CALL_JS_CODE }),
+  props: {
+    code: {
+      type: String,
+      required: true,
+    },
+  },
   mounted() {
     Prism.highlightAll();
   },

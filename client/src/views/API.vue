@@ -10,7 +10,7 @@
         </div>
         <div class="ma-10">
           <p>Call this page's public API with GET /api/word.</p>
-          <SyntaxHighlighter/>
+          <SyntaxHighlighter :code="API_CALL_JS_CODE"/>
         </div>
       </div>
     </div>
@@ -33,11 +33,19 @@
 </template>
 
 <script>
-import SyntaxHighlighter from "@/components/code/SyntaxHighlighter"
+import SyntaxHighlighter from "@/components/code/SyntaxHighlighter";
+
+const API_CALL_JS_CODE =
+  `fetch('https://ranglish.herokuapp.com/api/word')` +
+  "\n" +
+  ".then(response => response.json())" +
+  "\n" +
+  ".then(json => console.log(json))";
 
 export default {
   name: "API",
   components: { SyntaxHighlighter },
+  data: () => ({ API_CALL_JS_CODE }),
 };
 </script>
 
