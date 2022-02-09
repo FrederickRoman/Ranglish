@@ -10,7 +10,7 @@
         </div>
         <div class="ma-10">
           <p>Call this page's public API with GET /api/word.</p>
-          <p>Example API Call</p>
+          <SyntaxHighlighter/>
         </div>
       </div>
     </div>
@@ -33,12 +33,12 @@
 </template>
 
 <script>
-// import ExternalLink from "@/components/link/ExternalLink";
+import SyntaxHighlighter from "@/components/code/SyntaxHighlighter"
 
-// export default {
-//   name: "About",
-//   components: { ExternalLink },
-// };
+export default {
+  name: "API",
+  components: { SyntaxHighlighter },
+};
 </script>
 
  <style lang="scss" scoped>
