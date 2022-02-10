@@ -5,6 +5,9 @@
 </template>
 
 <script>
+/**
+ * Shows code text that has been syntax highlighted
+ */
 import Prism from "prismjs";
 
 export default {

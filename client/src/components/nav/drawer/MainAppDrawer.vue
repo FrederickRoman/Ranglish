@@ -11,6 +11,7 @@ import DrawerBrandLi from "./branding/DrawerBrandLi";
 import DrawerNavList from "./nav/DrawerNavlist";
 
 export default {
+  name: "MainAppDrawer",
   components: {
     DrawerBrandLi,
     DrawerNavList,

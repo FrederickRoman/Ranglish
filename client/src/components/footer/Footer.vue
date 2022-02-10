@@ -9,6 +9,9 @@
 </template>
 
 <script>
+/**
+ * Shows author's name, link and copyright
+ */
 import ExternalLink from "@/components/link/ExternalLink";
 
 const DEFAULT_YEAR = 2022;

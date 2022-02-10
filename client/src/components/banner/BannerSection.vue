@@ -9,9 +9,13 @@
 </template>
 
 <script>
+/**
+ * Show banner with slight parallax effect
+ */
 import DemoSection from "./demo/DemoSection";
 
 export default {
+  name: "BannerSection",
   components: {
     DemoSection,
   },
@@ -20,7 +24,7 @@ export default {
 
 
 <style lang="scss" scoped>
-@use '@/styles/colors/_colors.scss';
+@use "@/styles/colors/_colors.scss";
 
 $fallback-img-solid-color: colors.$primary-color;
 $fallback-linear-gradient: linear-gradient(

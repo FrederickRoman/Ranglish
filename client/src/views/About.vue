@@ -71,6 +71,9 @@
 </template>
 
 <script>
+/**
+ * Describes at a high-level, the app's purpose and working principles.
+ */
 import ExternalLink from "@/components/link/ExternalLink";
 
 export default {

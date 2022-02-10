@@ -48,6 +48,10 @@
 </template>
 
 <script>
+/**
+ * Showcases the API with a syntax highlighted request,
+ * and response upon clicking a fetch-call "Run" button.
+ */
 import { mapGetters, mapActions } from "vuex";
 import SyntaxHighlighter from "@/components/code/SyntaxHighlighter";
 

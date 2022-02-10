@@ -1,4 +1,5 @@
 <template >
+  <!-- General descrition of the Ranglish app -->
   <section>
     <div class="d-lg-flex">
       <div class="mx-4">
@@ -33,7 +34,7 @@
           <ul>
             <li>Using the generate button on this page</li>
             <li>Call this page's public API with GET /api/word.</li>
-             <router-link to="/apiPage"> See more</router-link>
+            <router-link to="/apiPage"> See more</router-link>
           </ul>
         </div>
       </div>

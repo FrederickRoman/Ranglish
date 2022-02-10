@@ -6,6 +6,10 @@
 </template>
 
 <script>
+/**
+ * Manages the Bar-Drawer interactions. The Bar can open the Drawer.
+ * The Drawer is closed by clicking away from it (or clicking a link).
+ */
 import MainAppBar from "./bar/MainAppBar";
 import MainAppDrawer from "./drawer/MainAppDrawer";
 

@@ -11,6 +11,12 @@
 </template>
 
 <script>
+/**
+ * It Structures the App as a typical SPA with multiple routes.
+ * It consists of a nav, a dynamic main content, and a footer, all on a column.
+ * 
+ * @author Frederick Roman
+ */
 import MainNav from "./components/nav/MainNav";
 import Footer from "./components/footer/Footer";
 export default {
