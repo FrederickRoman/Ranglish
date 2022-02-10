@@ -33,6 +33,7 @@
           <ul>
             <li>Using the generate button on this page</li>
             <li>Call this page's public API with GET /api/word.</li>
+             <router-link to="/apiPage"> See more</router-link>
           </ul>
         </div>
       </div>
