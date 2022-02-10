@@ -14,9 +14,13 @@ export default {
       type: String,
       required: true,
     },
+    disabled: {
+      type: Boolean,
+      default: false,
+    },
   },
   mounted() {
-    Prism.highlightAll();
+    if (!this.disabled) Prism.highlightAll();
   },
 };
 </script>
