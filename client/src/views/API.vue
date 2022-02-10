@@ -1,7 +1,7 @@
 <template>
   <section>
     <h1 class="d-flex justify-center align-center mx-6 my-6">API</h1>
-    <div class="d-lg-flex">
+    <div class="d-lg-flex justify-center align-center">
       <div class="">
         <div class="d-flex mx-4 mb-6">
           <h2 class="d-flex justify-center align-center mx-6">
@@ -30,7 +30,7 @@
       </div>
     </div>
     <v-divider class="mb-6" color="primary"></v-divider>
-    <div class="d-lg-flex">
+    <div class="d-lg-flex justify-center align-center">
       <div class="">
         <div class="d-flex mx-4 mb-6">
           <h2 class="d-flex justify-center align-center mx-6">
