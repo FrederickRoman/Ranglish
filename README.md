@@ -7,9 +7,9 @@
 
 This a full-stack public API that provides made-up english-sounding words that follow [english phonotactics](https://en.wikipedia.org/wiki/Phonotactics#English_phonotactics). For example:
 
-- gurt: ɡʌrt
-- drim: drɪm
-- sclown: sklaʊn
+- ranglish: /ɹæŋ ɡlɪʃ/
+- drim: /drɪm/
+- sclown: /sklaʊn/
 
 <div style="display:flex; flex-direction:column;"><img src="https://github.com/FrederickRoman/Ranglish/blob/main/docs/mockups/Ranglish%20(iPhone%205%20SE).png" alt="Ranglish home page phone mockup"/>
 </div>
