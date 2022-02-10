@@ -18,6 +18,10 @@ const allVowelSounds: ISyllableSegment[]  = [
     { ipaPhoneme: 'aʊ', graphemeSequences: ['ow'] },
 ]
 
+/**
+ * The nucleus structures were take from the wikipedia article on English phonology.
+ * @see https://en.wikipedia.org/wiki/English_phonology#Nucleus
+ */
 const nucleus = [...allVowelSounds];
 
 export default nucleus;

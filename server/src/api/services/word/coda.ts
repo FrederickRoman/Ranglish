@@ -154,6 +154,10 @@ const threeObstruents: ISyllableSegment[] = [
   { ipaPhoneme: "kst", graphemeSequences: ["xt"] },
 ];
 
+/**
+ * The coda structures were take from the wikipedia article on English phonology.
+ * @see https://en.wikipedia.org/wiki/English_phonology#Coda
+ */
 const coda: ISyllableSegment[] = [
   ...allConsonantPhonemesButhwj,
   ...lateralApproximantPlusStopOrAffricate,

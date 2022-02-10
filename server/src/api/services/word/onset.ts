@@ -93,6 +93,10 @@ const sPlusVoicelessStopPlusApproximant: ISyllableSegment[] = [
 
 // const sPlusVoicelessFricativePlusApproximant = [];
 
+/**
+ * The onset structures were take from the wikipedia article on English phonology.
+ * @see https://en.wikipedia.org/wiki/English_phonology#Onset
+ */
 const onset: ISyllableSegment[] = [
   ...singleConsonantPhonemesExceptŋ,
   ...stopPlusApproximantOtherThanj,
