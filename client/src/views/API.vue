@@ -10,7 +10,22 @@
         </div>
         <div class="ma-10">
           <p>Call this page's public API with GET /api/word.</p>
-          <SyntaxHighlighter :code="API_CALL_JS_CODE"/>
+          <div class="flex-column justify-center align-center">
+            <SyntaxHighlighter :code="apiCallJsCode" />
+            <div class="d-flex justify-center align-center">
+              <v-btn dark color="secondary" @click="callApi">Run</v-btn>
+            </div>
+            <SyntaxHighlighter
+              v-if="resStatus === 'success'"
+              :code="apiResponse"
+              :disabled="true"
+            />
+            <div v-else-if="resStatus === 'error'">
+              <p>Oop! something went wrong</p>
+              <p>Please refresh and/or come back later.</p>
+            </div>
+            <div v-else>Press <code>Run</code> to see API response</div>
+          </div>
         </div>
       </div>
     </div>
@@ -33,6 +48,7 @@
 </template>
 
 <script>
+import { mapGetters, mapActions } from "vuex";
 import SyntaxHighlighter from "@/components/code/SyntaxHighlighter";
 
 const API_CALL_JS_CODE =
@@ -45,7 +61,38 @@ const API_CALL_JS_CODE =
 export default {
   name: "API",
   components: { SyntaxHighlighter },
-  data: () => ({ API_CALL_JS_CODE }),
+  data: () => ({
+    apiResponse: null,
+    resStatus: "", //= "success" | "error" | ""
+  }),
+  computed: {
+    ...mapGetters(["initWord", "word"]),
+  },
+  watch: {
+    word: {
+      deep: true,
+      immediate: true,
+      handler(currentWord) {
+        this.apiResponse = currentWord;
+        console.log("word changed");
+      },
+    },
+  },
+  created() {
+    this.apiCallJsCode = API_CALL_JS_CODE;
+  },
+  methods: {
+    ...mapActions({ fetchWord: "FETCH_WORD" }),
+    async callApi() {
+      try {
+        await this.fetchWord();
+        this.resStatus = "success";
+      } catch (error) {
+        this.resStatus = "error";
+        console.log(error);
+      }
+    },
+  },
 };
 </script>
 
